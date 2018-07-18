@@ -5,7 +5,8 @@ url: https://gigarad.co
 title: Gigarad
 email: gautham@gigarad.com
 description: "Mobile Application Development | Ideate | Design | Build | Deliver | App"
-
+plugins:
+  - jekyll-sitemap
 # Build settings
 markdown: kramdown
 permalink: pretty
