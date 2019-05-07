@@ -20,7 +20,7 @@
     <!-- Event snippet for Formspree Submission conversion page
 In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
 <script>
-function gtag_report_conversion(url) {
+function gtag_report_formspree_conversion(url) {
   var callback = function () {
     if (typeof(url) != 'undefined') {
       window.location = url;
@@ -33,7 +33,22 @@ function gtag_report_conversion(url) {
   return false;
 }
 </script>
-
+<!-- Event snippet for Scheduled a call with us conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+<script>
+function gtag_report_calendly_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-769529359/BwNpCL3WpJ0BEI-s-O4C',
+      'event_callback': callback
+  });
+  return false;
+}
+</script>
     <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
     <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript"></script>
 </head>
@@ -158,7 +173,7 @@ Discovery ∙ Wireframe ∙ Prototype</p>
             <div class="about">
               <div class="about--banner">
                 <h2>We<br>believe in<br>passionate<br>people</h2>
-<a href="" id="calendlyLink" onclick="Calendly.showPopupWidget('https://calendly.com/gigarad/30min');return false;">Schedule a call with us
+<a href="" id="calendlyLink" onclick="gtag_report_calendly_conversion();Calendly.showPopupWidget('https://calendly.com/gigarad/30min');return false;">Schedule a call with us
                   <span>
                     <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 118" style="enable-background:new 0 0 150 118;" xml:space="preserve">
                     <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">
@@ -280,7 +295,7 @@ Discovery ∙ Wireframe ∙ Prototype</p>
                     <label for="email">Email</label>
                   </div>
                 </div>
-                <input type="submit" value="Send Request" onclick="gtag_report_conversion()">
+                <input type="submit" value="Send Request" onclick="gtag_report_formspree_conversion()">
               </form>
             </div>
           </li>
