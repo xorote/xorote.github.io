@@ -38,7 +38,7 @@ $( document ).ready(function() {
 
 if($(this).hasClass("is-blog"))
 {
-  location.assign("http://0.0.0.0:8000/blog/");
+  location.assign("https://gigarad.co/blog");
   return;
 }
     if (!($(this).hasClass('is-active'))) {
