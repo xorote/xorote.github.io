@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+    <title>Hello world, SwiftUI? - Gigarad
+    </title>
+    <meta name="description" content="SwiftUI is the hot new tech from Apple. And I’m going to share my experiences creating a Hello Word project in the brand new SwiftUI user interface. And I sh..." />
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="MobileOptimized" content="320" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" type="text/css" href="/blog/assets/css/screen.css" />
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400" />
+    <!-- Customisation  -->
+    <link rel="stylesheet" type="text/css" href="/blog/assets/css/main.css" />
+
+</head>
+<body class="home-template">
+
+    <header class="main-header post-head no-cover">
+    <nav class="main-nav  clearfix">
+        <a class="back-button icon-arrow-left" href="/blog/">Home</a>
+        <a class="subscribe-button icon-feed" href="/blog/feed.xml">Subscribe</a>
+    </nav>
+</header>
+
+<main class="content" role="main">
+
+    <article class="post">
+
+        <header class="post-header">
+            <h1 class="post-title">Hello world, SwiftUI?</h1>
+            <section class="post-meta" style="margin-bottom:1em;">
+                
+                    on SwiftUI, beginner, Swift, and Opaque-types
+                
+            </section>
+        </header>
+
+        <section class="post-content">
+            <p>SwiftUI is the hot new tech from Apple. And I’m going to share my experiences creating a Hello Word project in the brand new SwiftUI user interface. And I should tell you, I’m excited to learn a new piece of tech in the Apple realm. Aren’t you?</p>
+
+<h4 id="what-is-swiftui">What is SwiftUI?</h4>
+<p>I started reading about <a href="https://developer.apple.com/xcode/swiftui/">SwiftUI</a> in SwiftUI’s official page at Apple’s website. In short and according to Apple, SwiftUI is the modern way to declare user interfaces in any Apple platform. SwiftUI lets you declare the UI in Swift and preview it in realtime. SwiftUI not only makes the UI implementation easier but also makes it faster, since we can avoid build times while using StoryBoard.</p>
+
+<h4 id="hello-world">Hello, World</h4>
+<p>Let’s start by creating a new project in Xcode.
+Open Xcode(Version 11 or later required) and select create a new Xcode project.
+<img src="../assets/images/create-new-xcode-project.png" alt="create-new-xcode-project" class="img-responsive" />
+Then choose the template as Single View App and click Next
+<img src="../assets/images/select-single-view-app.png" alt="select-single-view-app" class="img-responsive" />
+And then fill in the details for the new project and make sure you’ve selected <code class="language-plaintext highlighter-rouge">SwiftUI</code> for the User Interface. And click Next.
+<img src="../assets/images/select-swiftui-user-interface.png" alt="select-swiftui-user-interface" class="img-responsive" />
+And then choose your preferred directory and click on Create to create your new Project. Once you’ve created your project you will be presented with a screen like this.
+<img src="../assets/images/hello-world.png" alt="hello-world" class="img-responsive" />
+From my many years of experience in the iOS app development, UI wise the first thing that comes to my attention is that Xcode’s new Assistant editor. Now it makes total sense why Apple have made changes there, it really works well with the new SwiftUI.</p>
+
+<p>On the right you can see the preview of the UI you’re working on and on the left you can easily edit the code. Click on <code class="language-plaintext highlighter-rouge">Resume</code> to see the preview working.
+<img src="../assets/images/hello-world-resume.png" alt="hello-world-resume" class="img-responsive" />
+Once you’ve clicked <code class="language-plaintext highlighter-rouge">Resume</code> you’ll see the preview of the UI in the canvas and it says “Hello, World”, Voila!</p>
+
+<p>And the code in the editor looks like this.</p>
+
+<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="kd">import</span> <span class="kt">SwiftUI</span>
+<span class="kd">struct</span> <span class="kt">ContentView</span><span class="p">:</span> <span class="kt">View</span> <span class="p">{</span>
+    <span class="k">var</span> <span class="nv">body</span><span class="p">:</span> <span class="n">some</span> <span class="kt">View</span> <span class="p">{</span>
+        <span class="kt">Text</span><span class="p">(</span><span class="s">"Hello, World!"</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="kd">struct</span> <span class="kt">ContentView_Previews</span><span class="p">:</span> <span class="kt">PreviewProvider</span> <span class="p">{</span>
+    <span class="kd">static</span> <span class="k">var</span> <span class="nv">previews</span><span class="p">:</span> <span class="n">some</span> <span class="kt">View</span> <span class="p">{</span>
+        <span class="kt">ContentView</span><span class="p">()</span>
+    <span class="p">}</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>We are seeing three things here, an import statement and two structs. The <code class="language-plaintext highlighter-rouge">import</code> statement imports the brand new SwiftUI framework and the two structs declares the UI.</p>
+
+<p>The first struct - <code class="language-plaintext highlighter-rouge">ContentView</code> conforms to the protocol <code class="language-plaintext highlighter-rouge">View</code>. And as required by the protocol the <code class="language-plaintext highlighter-rouge">ContentView</code> struct has implemented a <code class="language-plaintext highlighter-rouge">body</code> variable of type <code class="language-plaintext highlighter-rouge">some View</code>. The body variable is a getter and has a Text object initialized with String “Hello, World”. And you must have noticed the keyword <code class="language-plaintext highlighter-rouge">some</code> in it and it’s not a mistake. The new keyword <code class="language-plaintext highlighter-rouge">some</code> is at the epicentre of the new feature <strong>Opaque Types</strong>. And Opaque types are introduced and supported only in Swift 5.1.</p>
+
+<h4 id="how-to-make-opaque-types">How to make Opaque Types?</h4>
+<p>In order to understand Opaque type you must need a clear understanding of how Generic and Protocol types work. In earlier Swift Versions (version &lt; 5.1) many must have faced this issue. We will be required to define a concrete type whenever we return a protocol type that has an associated type. This is because Swift compiler won’t be able to compare or understand the underlying types of the Protocol types with the associated type. On the other hand the Opaque type will let the compiler understand and compare the type. Opaque type gives us the guarantee that the underlying type conforms to a particular protocol. You should use <code class="language-plaintext highlighter-rouge">some</code> keyword before your normal type to make a type opaque, for example as we saw in the code above <code class="language-plaintext highlighter-rouge">var body: some View</code>. I believe opaque types makes the SwiftUI possible, since an object of <code class="language-plaintext highlighter-rouge">View</code> can contain any kind of <code class="language-plaintext highlighter-rouge">View</code> object of type which conforms to <code class="language-plaintext highlighter-rouge">View</code> protocol. If the above doesn’t make any sense and to read more in detail about Opaque Type visit the official <a href="https://docs.swift.org/swift-book/LanguageGuide/OpaqueTypes.html">Swift page</a></p>
+
+<p>Apart from the <code class="language-plaintext highlighter-rouge">ContentView</code> struct there is a second struct <code class="language-plaintext highlighter-rouge">ContentView_Previews</code> which conforms to <code class="language-plaintext highlighter-rouge">PreviewProvider</code>. The <code class="language-plaintext highlighter-rouge">PreviewProvider</code> protocol requires a body object as well, which will be rendered in the preview.</p>
+
+<p>And there is also a new Delegate to support SwiftUI. It’s called <code class="language-plaintext highlighter-rouge">SceneDelegate.swift</code>, and you can find it in the navigator. It contains the boiler plate code that lets you manage your UI in different scenarios. We will discuss more about SwiftUI in the future.</p>
+
+
+        </section>
+
+        
+
+        <footer class="post-footer">
+            <!-- If we want to display author's name and bio -->
+            
+                <figure class="author-image">
+                    <a class="img" href="/blog/" style="background-image: url(/blog/assets/images/profile.png)">
+                    <span class="hidden">Gautham Ilango's Picture</span></a>
+                </figure>
+                <section class="author">
+                    <!-- Author Name -->
+                    <h4> Gautham Ilango </h4>
+                    <!-- Author Bio -->
+                    <p>
+                        Owner / iOS - Android - React Native App Developer @ Gigarad
+                    </p>
+                </section>
+            
+
+            <!-- Share links section -->
+            <section class="share">
+    <h4>Share this post</h4>
+    <a class="icon-twitter" href="http://twitter.com/share?text=Hello world, SwiftUI?&amp;url=https://gigarad.co/blog/articles/how-to-helloworld-swiftui.html"
+        onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+        <span class="hidden">Twitter</span>
+    </a>
+    <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://gigarad.co/blog/articles/how-to-helloworld-swiftui.html"
+        onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+        <span class="hidden">Facebook</span>
+    </a>
+    <a class="icon-linkedin" href="http://www.linkedin.com/shareArticle?mini=true&url=https://gigarad.co/blog/articles/how-to-helloworld-swiftui.html"
+       onclick="window.open(this.href, 'linkedin-share', 'width=992,height=318');return false;">
+        <span class="hidden">LinkedIn</span>
+    </a>
+</section>
+
+
+            <!-- Disqus comments -->
+            
+
+        </footer>
+
+    </article>
+
+</main>
+
+    <footer class="site-footer clearfix">
+      <section class="copyright">
+        <a href="https://gigarad.co">Gigarad</a> &copy;
+              2019 &bull; All rights reserved.
+      </section>
+    </footer>
+
+    <script type="text/javascript" src="/blog/assets/js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="/blog/assets/js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="/blog/assets/js/index.js"></script>
+
+    <!-- Google Analytics Tracking code -->
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-80866844-2']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+</body>
+</html>
