@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+    <title>How to create UITableView(TableView) in SwiftUI? - Gigarad
+    </title>
+    <meta name="description" content="If you’re familiar with iOS app development you must have come around UITableView, it’s one of the most important and very basic element in the iOS app devel..." />
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="MobileOptimized" content="320" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" type="text/css" href="/blog/assets/css/screen.css" />
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400" />
+    <!-- Customisation  -->
+    <link rel="stylesheet" type="text/css" href="/blog/assets/css/main.css" />
+
+</head>
+<body class="home-template">
+
+    <header class="main-header post-head no-cover">
+    <nav class="main-nav  clearfix">
+        <a class="back-button icon-arrow-left" href="/blog/">Home</a>
+        <a class="subscribe-button icon-feed" href="/blog/feed.xml">Subscribe</a>
+    </nav>
+</header>
+
+<main class="content" role="main">
+
+    <article class="post">
+
+        <header class="post-header">
+            <h1 class="post-title">How to create UITableView(TableView) in SwiftUI?</h1>
+            <section class="post-meta" style="margin-bottom:1em;">
+                
+                    on SwiftUI, beginner, Swift, UITableView, TableView, List, and tutorial
+                
+            </section>
+        </header>
+
+        <section class="post-content">
+            <p>If you’re familiar with iOS app development you must have come around <code class="language-plaintext highlighter-rouge">UITableView</code>, it’s one of the most important and very basic element in the iOS app development. <code class="language-plaintext highlighter-rouge">UITableView</code> is used to display data in a list and it also gives the developer a fair amount of control over how the data is presented and how the user can interact with it. And for people from other realms, it’s like <code class="language-plaintext highlighter-rouge">RecyclerView</code> of Android and <code class="language-plaintext highlighter-rouge">FlatList</code> of React Native. Even though they are used to solve the same problem(Displaying the data in a list), they are architecturally very different. And let’s see how we are going to display a list of data in SwiftUI.</p>
+
+<h4 id="swiftuis-list">SwiftUI’s List</h4>
+<p><code class="language-plaintext highlighter-rouge">List</code> is used to display a list of data in SwiftUI. And implementation of the <code class="language-plaintext highlighter-rouge">List</code> is the most declarative way a single row table can be. Unlike <code class="language-plaintext highlighter-rouge">UITableView</code>, <code class="language-plaintext highlighter-rouge">List</code> can have any <code class="language-plaintext highlighter-rouge">View</code> as its basic building element and they are not limited to something like <code class="language-plaintext highlighter-rouge">UITableViewCell</code>. To learn more about <code class="language-plaintext highlighter-rouge">List</code>, let’s create an App that lists the items in menu of a typical restaurant.</p>
+
+<p>If you’re feeling lazy to create the project, and add &amp; process the <code class="language-plaintext highlighter-rouge">JSON</code> file, you can download the initial code from <a href="https://github.com/gauthamilango/InitialRestaurantApp/archive/master.zip">here</a> and jump right to the next section by clicking <a href="#menu-row">here</a>.</p>
+
+<p>Open Xcode and select Create a new Xcode project.
+<img src="../assets/images/create-new-xcode-project.png" alt="create-new-xcode-project" class="img-responsive" />
+Then choose the template as Single View App and click Next
+<img src="../assets/images/select-single-view-app.png" alt="select-single-view-app" class="img-responsive" />
+And then fill in the details for the new project, let’s name the app “RestaurantMenu” and make sure you’ve selected <code class="language-plaintext highlighter-rouge">SwiftUI</code> for the User Interface. And click Next.
+<img src="../assets/images/create-restaurant-menu-app.png" alt="create-restaurant-menu-app" class="img-responsive" />
+And then choose your preferred directory and click on Create to create your new Project. Once you’ve created your project you will be presented with a screen like this.
+<img src="../assets/images/hello-world.png" alt="hello-world" class="img-responsive" />
+Now we can start by adding the seed data for the restaurant Menu, which will be a <code class="language-plaintext highlighter-rouge">JSON</code> file and contains details about the dish. Create a new Empty file by using the shortcut key <code class="language-plaintext highlighter-rouge">CMD + N</code> and selecting <code class="language-plaintext highlighter-rouge">Empty</code> from <code class="language-plaintext highlighter-rouge">Other</code> section.
+<img src="../assets/images/select-empty-file.png" alt="select-empty-file" class="img-responsive" />
+And then enter the name <code class="language-plaintext highlighter-rouge">menuData.json</code> and click on Create to create the file.
+<img src="../assets/images/create-menu-data-json.png" alt="create-menu-data-json" class="img-responsive" />
+And then enter the contents in the below sample or you can add your own.</p>
+
+<figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Noodles"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"cuisine"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Chinese"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"price"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"imageName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"noodles"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Pizza"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"cuisine"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Italian"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"price"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"imageName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"pizza"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Burger"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"cuisine"</span><span class="p">:</span><span class="w"> </span><span class="s2">"American"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"price"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"imageName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"burger"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"French Fries"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"cuisine"</span><span class="p">:</span><span class="w"> </span><span class="s2">"American"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"price"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"imageName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"frenchFries"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Sushi"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"cuisine"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Japanese"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"price"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"imageName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sushi"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Dosa"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"cuisine"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Indian"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"price"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"imageName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"idly"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Hendl"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"cuisine"</span><span class="p">:</span><span class="w"> </span><span class="s2">"German"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"price"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"imageName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"hendl"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Shawarma"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"cuisine"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Middle Eastern"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"price"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"imageName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"shawarma"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Tacos de Papa"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"cuisine"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Mexican"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"price"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">9</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"imageName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"tacosDePapa"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span></code></pre></figure>
+
+<p>And add appropriate images. Create a group called <code class="language-plaintext highlighter-rouge">Resources</code> and move them all in. And make sure they all added in your <code class="language-plaintext highlighter-rouge">Copy Bundle Resources</code> under <code class="language-plaintext highlighter-rouge">Build Phases</code> in your project.</p>
+
+<h4 id="processing-the-json-data">Processing the JSON Data</h4>
+<p>First we need to define the structure of our <code class="language-plaintext highlighter-rouge">Dish</code> items to process the <code class="language-plaintext highlighter-rouge">JSON</code>. Create a new Swift file and name it as <code class="language-plaintext highlighter-rouge">Dish</code> and add the contents from below.</p>
+
+<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="kd">struct</span> <span class="kt">Dish</span><span class="p">:</span> <span class="kt">Codable</span><span class="p">,</span> <span class="kt">Hashable</span><span class="p">,</span> <span class="kt">Identifiable</span> <span class="p">{</span>
+  <span class="k">var</span> <span class="nv">id</span><span class="p">:</span> <span class="kt">Int</span>
+  <span class="k">var</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span>
+  <span class="k">var</span> <span class="nv">cuisine</span><span class="p">:</span> <span class="kt">String</span>
+  <span class="k">var</span> <span class="nv">price</span><span class="p">:</span> <span class="kt">Int</span>
+  <span class="k">var</span> <span class="nv">imageName</span><span class="p">:</span> <span class="kt">String</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>You can see that the types and names are similar to the data in JSON file. And we are using <code class="language-plaintext highlighter-rouge">Codable</code>, so that we don’t have to do any additional work in processing/decoding the JSON file.</p>
+
+<p>Create another file, call it <code class="language-plaintext highlighter-rouge">API</code> and add the following contents.</p>
+
+<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="k">let</span> <span class="nv">menuItems</span><span class="p">:</span> <span class="p">[</span><span class="kt">Dish</span><span class="p">]</span> <span class="o">=</span> <span class="nf">processJSONData</span><span class="p">(</span><span class="nv">filename</span><span class="p">:</span> <span class="s">"menuData.json"</span><span class="p">)</span>
+<span class="kd">private</span> <span class="kd">func</span> <span class="n">processJSONData</span><span class="o">&lt;</span><span class="kt">T</span><span class="p">:</span> <span class="kt">Decodable</span><span class="o">&gt;</span><span class="p">(</span><span class="nv">filename</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">T</span> <span class="p">{</span>
+  <span class="k">let</span> <span class="nv">data</span><span class="p">:</span> <span class="kt">Data</span>
+  <span class="k">guard</span> <span class="k">let</span> <span class="nv">file</span> <span class="o">=</span> <span class="kt">Bundle</span><span class="o">.</span><span class="n">main</span><span class="o">.</span><span class="nf">url</span><span class="p">(</span><span class="nv">forResource</span><span class="p">:</span> <span class="n">filename</span><span class="p">,</span> <span class="nv">withExtension</span><span class="p">:</span> <span class="kc">nil</span><span class="p">)</span>
+      <span class="k">else</span> <span class="p">{</span>
+          <span class="nf">fatalError</span><span class="p">(</span><span class="s">"Couldn't find </span><span class="se">\(</span><span class="n">filename</span><span class="se">)</span><span class="s"> in main bundle."</span><span class="p">)</span>
+  <span class="p">}</span>
+  <span class="k">do</span> <span class="p">{</span>
+      <span class="n">data</span> <span class="o">=</span> <span class="k">try</span> <span class="kt">Data</span><span class="p">(</span><span class="nv">contentsOf</span><span class="p">:</span> <span class="n">file</span><span class="p">)</span>
+  <span class="p">}</span> <span class="k">catch</span> <span class="p">{</span>
+      <span class="nf">fatalError</span><span class="p">(</span><span class="s">"Couldn't load </span><span class="se">\(</span><span class="n">filename</span><span class="se">)</span><span class="s"> from main bundle:</span><span class="se">\n\(</span><span class="n">error</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
+  <span class="p">}</span>
+  <span class="k">do</span> <span class="p">{</span>
+      <span class="k">let</span> <span class="nv">decoder</span> <span class="o">=</span> <span class="kt">JSONDecoder</span><span class="p">()</span>
+      <span class="k">return</span> <span class="k">try</span> <span class="n">decoder</span><span class="o">.</span><span class="nf">decode</span><span class="p">(</span><span class="kt">T</span><span class="o">.</span><span class="k">self</span><span class="p">,</span> <span class="nv">from</span><span class="p">:</span> <span class="n">data</span><span class="p">)</span>
+  <span class="p">}</span> <span class="k">catch</span> <span class="p">{</span>
+      <span class="nf">fatalError</span><span class="p">(</span><span class="s">"Couldn't parse </span><span class="se">\(</span><span class="n">filename</span><span class="se">)</span><span class="s"> as </span><span class="se">\(</span><span class="kt">T</span><span class="o">.</span><span class="k">self</span><span class="se">)</span><span class="s">:</span><span class="se">\n\(</span><span class="n">error</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+<span class="kd">final</span> <span class="kd">class</span> <span class="kt">RestaurantImageStore</span> <span class="p">{</span>
+    <span class="kd">typealias</span> <span class="kt">GRImageDictionary</span> <span class="o">=</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span> <span class="kt">CGImage</span><span class="p">]</span>
+    <span class="kd">fileprivate</span> <span class="k">var</span> <span class="nv">images</span><span class="p">:</span> <span class="kt">GRImageDictionary</span> <span class="o">=</span> <span class="p">[:]</span>
+    <span class="kd">fileprivate</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">scale</span> <span class="o">=</span> <span class="mi">2</span>
+    <span class="kd">static</span> <span class="k">var</span> <span class="nv">shared</span> <span class="o">=</span> <span class="kt">RestaurantImageStore</span><span class="p">()</span>
+    <span class="kd">func</span> <span class="nf">image</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Image</span> <span class="p">{</span>
+        <span class="k">let</span> <span class="nv">index</span> <span class="o">=</span> <span class="nf">guaranteeImage</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="n">name</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="kt">Image</span><span class="p">(</span><span class="n">images</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="n">index</span><span class="p">],</span> <span class="nv">scale</span><span class="p">:</span> <span class="kt">CGFloat</span><span class="p">(</span><span class="kt">RestaurantImageStore</span><span class="o">.</span><span class="n">scale</span><span class="p">),</span> <span class="nv">label</span><span class="p">:</span> <span class="kt">Text</span><span class="p">(</span><span class="nv">verbatim</span><span class="p">:</span> <span class="n">name</span><span class="p">))</span>
+    <span class="p">}</span>
+    <span class="kd">static</span> <span class="kd">func</span> <span class="nf">loadPNGImage</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">CGImage</span> <span class="p">{</span>
+        <span class="k">guard</span>
+            <span class="k">let</span> <span class="nv">url</span> <span class="o">=</span> <span class="kt">Bundle</span><span class="o">.</span><span class="n">main</span><span class="o">.</span><span class="nf">url</span><span class="p">(</span><span class="nv">forResource</span><span class="p">:</span> <span class="n">name</span><span class="p">,</span> <span class="nv">withExtension</span><span class="p">:</span> <span class="s">"png"</span><span class="p">),</span>
+            <span class="k">let</span> <span class="nv">imageSource</span> <span class="o">=</span> <span class="kt">CGImageSourceCreateWithURL</span><span class="p">(</span><span class="n">url</span> <span class="k">as</span> <span class="kt">NSURL</span><span class="p">,</span> <span class="kc">nil</span><span class="p">),</span>
+            <span class="k">let</span> <span class="nv">image</span> <span class="o">=</span> <span class="kt">CGImageSourceCreateImageAtIndex</span><span class="p">(</span><span class="n">imageSource</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="kc">nil</span><span class="p">)</span>
+        <span class="k">else</span> <span class="p">{</span>
+            <span class="nf">fatalError</span><span class="p">(</span><span class="s">"Couldn't load image </span><span class="se">\(</span><span class="n">name</span><span class="se">)</span><span class="s">.png from main bundle."</span><span class="p">)</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="n">image</span>
+    <span class="p">}</span>
+    <span class="kd">fileprivate</span> <span class="kd">func</span> <span class="nf">guaranteeImage</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">GRImageDictionary</span><span class="o">.</span><span class="kt">Index</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="k">let</span> <span class="nv">index</span> <span class="o">=</span> <span class="n">images</span><span class="o">.</span><span class="nf">index</span><span class="p">(</span><span class="nv">forKey</span><span class="p">:</span> <span class="n">name</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="n">index</span> <span class="p">}</span>
+
+        <span class="n">images</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="kt">RestaurantImageStore</span><span class="o">.</span><span class="nf">loadPNGImage</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="n">name</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">images</span><span class="o">.</span><span class="nf">index</span><span class="p">(</span><span class="nv">forKey</span><span class="p">:</span> <span class="n">name</span><span class="p">)</span><span class="o">!</span>
+    <span class="p">}</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>The above code is pretty simple. <code class="language-plaintext highlighter-rouge">loadPNGImage</code> function looks for the file and then gets the data from it. And later decodes it with <code class="language-plaintext highlighter-rouge">JSONDecoder.decode</code>. The generic type <code class="language-plaintext highlighter-rouge">T</code> has a constraint, it should conform to <code class="language-plaintext highlighter-rouge">Decodable</code>. We are assigning the output of the function call in the first statement to <code class="language-plaintext highlighter-rouge">menuItems</code>, a constant <code class="language-plaintext highlighter-rouge">Array</code> of <code class="language-plaintext highlighter-rouge">Dish</code> items. So the type <code class="language-plaintext highlighter-rouge">Dish</code> is implicitly taken as the generic type <code class="language-plaintext highlighter-rouge">T</code>, you must have noted <code class="language-plaintext highlighter-rouge">Dish</code> conforms to <code class="language-plaintext highlighter-rouge">Codable</code> and <code class="language-plaintext highlighter-rouge">Codable</code> itself conforms to <code class="language-plaintext highlighter-rouge">Encodable</code> and <code class="language-plaintext highlighter-rouge">Decodable</code>, so the constraint is satisfied. The <code class="language-plaintext highlighter-rouge">RestaurantImageStore</code> processes the imageName and provides us an <code class="language-plaintext highlighter-rouge">Image</code> element which we can use directly in our SwiftUI <code class="language-plaintext highlighter-rouge">View</code>.</p>
+
+<h4 id="menu-row">Menu Row</h4>
+<p>Now let’s create the row element for our Menu List. Use shortcut key <code class="language-plaintext highlighter-rouge">CMD + N</code>, select <code class="language-plaintext highlighter-rouge">SwiftUI View</code> under <code class="language-plaintext highlighter-rouge">User Interface</code> section. And name the file as <code class="language-plaintext highlighter-rouge">MenuRow</code> and click Create to create the file. You will be presented with the new file, with the boiler plate code, that displays “Hello,World!”. Click on <code class="language-plaintext highlighter-rouge">Resume</code> button in the canvas on the right hand side to see the previews. Let’s replace the code of <code class="language-plaintext highlighter-rouge">MenuRow</code> struct with the following.</p>
+
+<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="k">var</span> <span class="nv">dish</span><span class="p">:</span> <span class="kt">Dish</span>
+    <span class="k">var</span> <span class="nv">body</span><span class="p">:</span> <span class="n">some</span> <span class="kt">View</span> <span class="p">{</span>
+        <span class="kt">HStack</span> <span class="p">{</span>
+            <span class="n">dish</span><span class="o">.</span><span class="n">image</span>
+                <span class="o">.</span><span class="nf">resizable</span><span class="p">()</span>
+                <span class="o">.</span><span class="nf">frame</span><span class="p">(</span><span class="nv">width</span><span class="p">:</span> <span class="mi">50</span><span class="p">,</span> <span class="nv">height</span><span class="p">:</span> <span class="mi">50</span><span class="p">)</span>
+            <span class="kt">Text</span><span class="p">(</span><span class="nv">verbatim</span><span class="p">:</span> <span class="n">dish</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+            <span class="kt">Spacer</span><span class="p">()</span>
+        <span class="p">}</span>
+    <span class="p">}</span></code></pre></figure>
+
+<p>We are using a <code class="language-plaintext highlighter-rouge">HStack</code>. And it lets us add SwiftUI <code class="language-plaintext highlighter-rouge">View</code> elements in a row order. If you’ve past experience with Swift, you must wonder how this is possible. This kind of syntax is possible due to the new features in <code class="language-plaintext highlighter-rouge">Swift 5.1</code>. Return omission and <code class="language-plaintext highlighter-rouge">FunctionBuilders</code>. We will talk about this in detail later.</p>
+
+<h4 id="menu-list">Menu List</h4>
+<p>Now let’s create our Menu table or list. Again create a new <code class="language-plaintext highlighter-rouge">SwiftUI View</code> by creating a new file and now name it as <code class="language-plaintext highlighter-rouge">MenuList</code>. And replace the content of the getter of variable <code class="language-plaintext highlighter-rouge">body</code> in the <code class="language-plaintext highlighter-rouge">MenuList</code> struct with the following code.</p>
+
+<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="kt">List</span><span class="p">(</span><span class="n">menuItems</span><span class="p">)</span> <span class="p">{</span> <span class="n">dish</span> <span class="k">in</span>
+    <span class="kt">MenuRow</span><span class="p">(</span><span class="nv">dish</span><span class="p">:</span> <span class="n">dish</span><span class="p">)</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>That’s it. Click on preview to see the List working. Pretty simple huh? If you’re from iOS development background, you would be shocked, because the above code is very very minimal and highly declarative and makes complete sense. All thanks to the Opaque types, Function Builders and Return omission features in the Swift 5.1. The <code class="language-plaintext highlighter-rouge">Dish</code> struct conforming to the <code class="language-plaintext highlighter-rouge">Identifiable</code> protocol lets us not declare the unique id key path, which is required to initialize the SwiftUI <code class="language-plaintext highlighter-rouge">List</code>. More on <code class="language-plaintext highlighter-rouge">ViewBuilder</code> and function builders in the future, they make this kind of code possible.</p>
+
+        </section>
+
+        
+
+        <footer class="post-footer">
+            <!-- If we want to display author's name and bio -->
+            
+                <figure class="author-image">
+                    <a class="img" href="/blog/" style="background-image: url(/blog/assets/images/profile.png)">
+                    <span class="hidden">Gautham Ilango's Picture</span></a>
+                </figure>
+                <section class="author">
+                    <!-- Author Name -->
+                    <h4> Gautham Ilango </h4>
+                    <!-- Author Bio -->
+                    <p>
+                        Owner / iOS - Android - React Native App Developer @ Gigarad
+                    </p>
+                </section>
+            
+
+            <!-- Share links section -->
+            <section class="share">
+    <h4>Share this post</h4>
+    <a class="icon-twitter" href="http://twitter.com/share?text=How to create UITableView(TableView) in SwiftUI?&amp;url=https://gigarad.co/blog/articles/how-to-create-table-view-in-swiftui.html"
+        onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+        <span class="hidden">Twitter</span>
+    </a>
+    <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://gigarad.co/blog/articles/how-to-create-table-view-in-swiftui.html"
+        onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+        <span class="hidden">Facebook</span>
+    </a>
+    <a class="icon-linkedin" href="http://www.linkedin.com/shareArticle?mini=true&url=https://gigarad.co/blog/articles/how-to-create-table-view-in-swiftui.html"
+       onclick="window.open(this.href, 'linkedin-share', 'width=992,height=318');return false;">
+        <span class="hidden">LinkedIn</span>
+    </a>
+</section>
+
+
+            <!-- Disqus comments -->
+            
+
+        </footer>
+
+    </article>
+
+</main>
+
+    <footer class="site-footer clearfix">
+      <section class="copyright">
+        <a href="https://gigarad.co">Gigarad</a> &copy;
+              2020 &bull; All rights reserved.
+      </section>
+    </footer>
+
+    <script type="text/javascript" src="/blog/assets/js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="/blog/assets/js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="/blog/assets/js/index.js"></script>
+
+    <!-- Google Analytics Tracking code -->
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-80866844-2']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+</body>
+</html>
