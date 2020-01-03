@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+    <title>How to navigate(UINavigationController) in SwiftUI? - Gigarad
+    </title>
+    <meta name="description" content="Every iOS application developer should have familiarity with UINavigationController. The navigation controller from UIKit is used to manage screens or UIView..." />
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="MobileOptimized" content="320" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" type="text/css" href="/blog/assets/css/screen.css" />
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400" />
+    <!-- Customisation  -->
+    <link rel="stylesheet" type="text/css" href="/blog/assets/css/main.css" />
+
+</head>
+<body class="home-template">
+
+    <header class="main-header post-head no-cover">
+    <nav class="main-nav  clearfix">
+        <a class="back-button icon-arrow-left" href="/blog/">Home</a>
+        <a class="subscribe-button icon-feed" href="/blog/feed.xml">Subscribe</a>
+    </nav>
+</header>
+
+<main class="content" role="main">
+
+    <article class="post">
+
+        <header class="post-header">
+            <h1 class="post-title">How to navigate(UINavigationController) in SwiftUI?</h1>
+            <section class="post-meta" style="margin-bottom:1em;">
+                
+                    on SwiftUI, beginner, Swift, and Opaque-types
+                
+            </section>
+        </header>
+
+        <section class="post-content">
+            <p>Every iOS application developer should have familiarity with <code class="language-plaintext highlighter-rouge">UINavigationController</code>. The navigation controller from <code class="language-plaintext highlighter-rouge">UIKit</code> is used to
+manage screens or <code class="language-plaintext highlighter-rouge">UIViewController</code>. <code class="language-plaintext highlighter-rouge">UINavigationController</code> uses a stack to manage the screens. We can push and pop screens out of it, we use many approaches for bringing a screen or a <code class="language-plaintext highlighter-rouge">UIViewController</code> to the front or switching or transitioning between screens or presenting it as a modal. For example <code class="language-plaintext highlighter-rouge">segue</code> in the StoryBoard.</p>
+
+<h4 id="navigationview-of-swiftui">NavigationView of SwiftUI</h4>
+<p>SwiftUI lets us navigate between screens or <code class="language-plaintext highlighter-rouge">View</code>s by using a struct called <code class="language-plaintext highlighter-rouge">NavigationView</code>. <code class="language-plaintext highlighter-rouge">NavigationView</code> conforms to the protocol <code class="language-plaintext highlighter-rouge">View</code>, And it does not have a body. Instead it can have content like <code class="language-plaintext highlighter-rouge">VStack</code> or <code class="language-plaintext highlighter-rouge">HStack</code>. To learn more about <code class="language-plaintext highlighter-rouge">NavigationView</code> let’s update our RestaurantMenu app and dive into the menu and look for more details. You can complete the steps in our previous post to <a href="/blog/articles/how-to-create-table-view-in-swiftui.html">create the menu app here</a> in our previous post or <a href="https://github.com/gauthamilango/completeRestaurantMenuApp/archive/master.zip">Download the RestaurantMenu project here</a>.</p>
+
+<h4 id="menu-detail">Menu Detail</h4>
+<p>Let’s create a menu detail screen, so that we can display details of a menu if a user clicks on a menu. Click on <code class="language-plaintext highlighter-rouge">CMD + N</code> shortcut to Create a new file and select <code class="language-plaintext highlighter-rouge">SwiftUI View</code> under <code class="language-plaintext highlighter-rouge">User Interface</code> section. And now copy the code below and paste it in <code class="language-plaintext highlighter-rouge">MenuDetail</code> struct. We will get into detail about this in our upcoming posts.</p>
+
+<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="k">var</span> <span class="nv">dish</span><span class="p">:</span> <span class="kt">Dish</span>
+  <span class="k">var</span> <span class="nv">body</span><span class="p">:</span> <span class="n">some</span> <span class="kt">View</span> <span class="p">{</span>
+    <span class="kt">VStack</span> <span class="p">{</span>
+      <span class="n">dish</span><span class="o">.</span><span class="n">image</span>
+        <span class="o">.</span><span class="nf">edgesIgnoringSafeArea</span><span class="p">(</span><span class="o">.</span><span class="n">top</span><span class="p">)</span>
+      <span class="o">.</span><span class="nf">frame</span><span class="p">(</span><span class="nv">height</span><span class="p">:</span> <span class="mi">300</span><span class="p">)</span>
+        <span class="o">.</span><span class="nf">scaledToFit</span><span class="p">()</span>
+        <span class="o">.</span><span class="nf">clipShape</span><span class="p">(</span><span class="kt">Circle</span><span class="p">())</span>
+      <span class="kt">VStack</span><span class="p">(</span><span class="nv">alignment</span><span class="p">:</span> <span class="o">.</span><span class="n">leading</span><span class="p">)</span> <span class="p">{</span>
+          <span class="kt">Text</span><span class="p">(</span><span class="n">dish</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+              <span class="o">.</span><span class="nf">font</span><span class="p">(</span><span class="o">.</span><span class="n">title</span><span class="p">)</span>
+
+          <span class="kt">HStack</span><span class="p">(</span><span class="nv">alignment</span><span class="p">:</span> <span class="o">.</span><span class="n">top</span><span class="p">)</span> <span class="p">{</span>
+              <span class="kt">Text</span><span class="p">(</span><span class="n">dish</span><span class="o">.</span><span class="n">cuisine</span><span class="p">)</span>
+                <span class="o">.</span><span class="nf">font</span><span class="p">(</span><span class="o">.</span><span class="n">subheadline</span><span class="p">)</span>
+                <span class="o">.</span><span class="nf">fontWeight</span><span class="p">(</span><span class="o">.</span><span class="n">bold</span><span class="p">)</span>
+              <span class="kt">Spacer</span><span class="p">()</span>
+            <span class="kt">Text</span><span class="p">(</span><span class="s">"$</span><span class="se">\(</span><span class="n">dish</span><span class="o">.</span><span class="n">price</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
+              <span class="o">.</span><span class="nf">font</span><span class="p">(</span><span class="o">.</span><span class="n">headline</span><span class="p">)</span>
+          <span class="p">}</span>
+      <span class="p">}</span>
+      <span class="o">.</span><span class="nf">padding</span><span class="p">()</span>
+      <span class="kt">Spacer</span><span class="p">()</span>
+    <span class="p">}</span>
+    <span class="o">.</span><span class="nf">navigationBarTitle</span><span class="p">(</span><span class="kt">Text</span><span class="p">(</span><span class="nv">verbatim</span><span class="p">:</span> <span class="n">dish</span><span class="o">.</span><span class="n">name</span><span class="p">),</span> <span class="nv">displayMode</span><span class="p">:</span> <span class="o">.</span><span class="n">inline</span><span class="p">)</span>
+  <span class="p">}</span></code></pre></figure>
+
+<p>After entering the code, the preview should look like this.
+<img src="../assets/images/menu-detail.png" alt="menu-detail" class="img-responsive" /></p>
+
+<h4 id="how-to-navigate-between-screens-in-swiftui">How to Navigate between screens in SwiftUI?</h4>
+<p>Copy the below code into the getter of var <code class="language-plaintext highlighter-rouge">body</code> in <code class="language-plaintext highlighter-rouge">MenuList</code> struct.</p>
+
+<figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="kt">NavigationView</span> <span class="p">{</span>
+      <span class="kt">List</span><span class="p">(</span><span class="n">menuItems</span><span class="p">)</span> <span class="p">{</span> <span class="n">dish</span> <span class="k">in</span>
+         <span class="kt">NavigationLink</span><span class="p">(</span><span class="nv">destination</span><span class="p">:</span> <span class="kt">MenuDetail</span><span class="p">(</span><span class="nv">dish</span><span class="p">:</span> <span class="n">dish</span><span class="p">))</span> <span class="p">{</span>
+             <span class="kt">MenuRow</span><span class="p">(</span><span class="nv">dish</span><span class="p">:</span> <span class="n">dish</span><span class="p">)</span>
+      <span class="p">}</span>
+    <span class="p">}</span><span class="o">.</span><span class="nf">navigationBarTitle</span><span class="p">(</span><span class="kt">Text</span><span class="p">(</span><span class="s">"Menu"</span><span class="p">))</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>That’s it. <code class="language-plaintext highlighter-rouge">navigationBarTitle</code> modifier sets the title <code class="language-plaintext highlighter-rouge">Text</code> of the screens inside <code class="language-plaintext highlighter-rouge">NavigationView</code>. Now you can run the preview in the canvas to see <code class="language-plaintext highlighter-rouge">NavigationView</code> working. Clicking on a row will take you to the respective Menu Details screen. Here, the <code class="language-plaintext highlighter-rouge">NavigationLink</code> works similar to <code class="language-plaintext highlighter-rouge">Segue</code> but in SwiftUI and in the most declarative way. This is how it should look.
+<img src="../assets/images/menu-with-navigation-view.png" alt="menu-with-navigation-view" class="img-responsive" />
+Clicking on a row will take you to menu details screen.
+<img src="../assets/images/menu-detail-in-navigation-view.png" alt="menu-detail-in-navigation-view" class="img-responsive" /></p>
+
+<p>We will dive in deep in the future posts about <code class="language-plaintext highlighter-rouge">NavigationView</code>. You can download <a href="https://github.com/gauthamilango/NavigatableRestaurantMenu/archive/master.zip">completed project here</a> and find <a href="https://developer.apple.com/tutorials/swiftui/building-lists-and-navigation">more info on NavigationView here</a></p>
+
+        </section>
+
+        
+
+        <footer class="post-footer">
+            <!-- If we want to display author's name and bio -->
+            
+                <figure class="author-image">
+                    <a class="img" href="/blog/" style="background-image: url(/blog/assets/images/profile.png)">
+                    <span class="hidden">Gautham Ilango's Picture</span></a>
+                </figure>
+                <section class="author">
+                    <!-- Author Name -->
+                    <h4> Gautham Ilango </h4>
+                    <!-- Author Bio -->
+                    <p>
+                        Owner / iOS - Android - React Native App Developer @ Gigarad
+                    </p>
+                </section>
+            
+
+            <!-- Share links section -->
+            <section class="share">
+    <h4>Share this post</h4>
+    <a class="icon-twitter" href="http://twitter.com/share?text=How to navigate(UINavigationController) in SwiftUI?&amp;url=https://gigarad.co/blog/articles/how-to-navigate-in-swiftui.html"
+        onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+        <span class="hidden">Twitter</span>
+    </a>
+    <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://gigarad.co/blog/articles/how-to-navigate-in-swiftui.html"
+        onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+        <span class="hidden">Facebook</span>
+    </a>
+    <a class="icon-linkedin" href="http://www.linkedin.com/shareArticle?mini=true&url=https://gigarad.co/blog/articles/how-to-navigate-in-swiftui.html"
+       onclick="window.open(this.href, 'linkedin-share', 'width=992,height=318');return false;">
+        <span class="hidden">LinkedIn</span>
+    </a>
+</section>
+
+
+            <!-- Disqus comments -->
+            
+
+        </footer>
+
+    </article>
+
+</main>
+
+    <footer class="site-footer clearfix">
+      <section class="copyright">
+        <a href="https://gigarad.co">Gigarad</a> &copy;
+              2020 &bull; All rights reserved.
+      </section>
+    </footer>
+
+    <script type="text/javascript" src="/blog/assets/js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="/blog/assets/js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="/blog/assets/js/index.js"></script>
+
+    <!-- Google Analytics Tracking code -->
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-80866844-2']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+</body>
+</html>

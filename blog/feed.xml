@@ -5,8 +5,8 @@
     <description>Our two cents about iOS App Development, Android App Development and React Native App Development (a.k.a We write about Mobile App Development :D)</description>
     <link>http://localhost:4000/blog/</link>
     <atom:link href="http://localhost:4000/blog/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 02 Jan 2020 12:17:36 +0530</pubDate>
-    <lastBuildDate>Thu, 02 Jan 2020 12:17:36 +0530</lastBuildDate>
+    <pubDate>Fri, 03 Jan 2020 19:56:45 +0530</pubDate>
+    <lastBuildDate>Fri, 03 Jan 2020 19:56:45 +0530</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
@@ -273,6 +273,80 @@ Pretty simple huh? If you’re from iOS development background, you would be sho
         <category>List</category>
         
         <category>tutorial</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>How to navigate(UINavigationController) in SwiftUI?</title>
+        <description>&lt;p&gt;Every iOS application developer should have familiarity with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;UINavigationController&lt;/code&gt;. The navigation controller from &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;UIKit&lt;/code&gt; is used to
+manage screens or &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;UIViewController&lt;/code&gt;. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;UINavigationController&lt;/code&gt; uses a stack to manage the screens. We can push and pop screens out of it, we use many approaches for bringing a screen or a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;UIViewController&lt;/code&gt; to the front or switching or transitioning between screens or presenting it as a modal. For example &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;segue&lt;/code&gt; in the StoryBoard.&lt;/p&gt;
+
+&lt;h4 id=&quot;navigationview-of-swiftui&quot;&gt;NavigationView of SwiftUI&lt;/h4&gt;
+&lt;p&gt;SwiftUI lets us navigate between screens or &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;View&lt;/code&gt;s by using a struct called &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;NavigationView&lt;/code&gt;. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;NavigationView&lt;/code&gt; conforms to the protocol &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;View&lt;/code&gt;, And it does not have a body. Instead it can have content like &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;VStack&lt;/code&gt; or &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;HStack&lt;/code&gt;. To learn more about &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;NavigationView&lt;/code&gt; let’s update our RestaurantMenu app and dive into the menu and look for more details. You can complete the steps in our previous post to &lt;a href=&quot;/blog/articles/how-to-create-table-view-in-swiftui.html&quot;&gt;create the menu app here&lt;/a&gt; in our previous post or &lt;a href=&quot;https://github.com/gauthamilango/completeRestaurantMenuApp/archive/master.zip&quot;&gt;Download the RestaurantMenu project here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h4 id=&quot;menu-detail&quot;&gt;Menu Detail&lt;/h4&gt;
+&lt;p&gt;Let’s create a menu detail screen, so that we can display details of a menu if a user clicks on a menu. Click on &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;CMD + N&lt;/code&gt; shortcut to Create a new file and select &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;SwiftUI View&lt;/code&gt; under &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;User Interface&lt;/code&gt; section. And now copy the code below and paste it in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;MenuDetail&lt;/code&gt; struct. We will get into detail about this in our upcoming posts.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;&lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;dish&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Dish&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;some&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;View&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;VStack&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;dish&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;image&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;edgesIgnoringSafeArea&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;top&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+      &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;frame&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;300&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;scaledToFit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;clipShape&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;Circle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt;
+      &lt;span class=&quot;kt&quot;&gt;VStack&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;alignment&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;leading&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+          &lt;span class=&quot;kt&quot;&gt;Text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dish&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+              &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;font&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+          &lt;span class=&quot;kt&quot;&gt;HStack&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;alignment&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;top&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+              &lt;span class=&quot;kt&quot;&gt;Text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dish&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cuisine&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+                &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;font&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;subheadline&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+                &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;fontWeight&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bold&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+              &lt;span class=&quot;kt&quot;&gt;Spacer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+            &lt;span class=&quot;kt&quot;&gt;Text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;$&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dish&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;price&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+              &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;font&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;headline&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+          &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+      &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+      &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;padding&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+      &lt;span class=&quot;kt&quot;&gt;Spacer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;navigationBarTitle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;Text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;verbatim&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dish&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;displayMode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;inline&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;After entering the code, the preview should look like this.
+&lt;img src=&quot;../assets/images/menu-detail.png&quot; alt=&quot;menu-detail&quot; class=&quot;img-responsive&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;how-to-navigate-between-screens-in-swiftui&quot;&gt;How to Navigate between screens in SwiftUI?&lt;/h4&gt;
+&lt;p&gt;Copy the below code into the getter of var &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;body&lt;/code&gt; in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;MenuList&lt;/code&gt; struct.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;&lt;span class=&quot;kt&quot;&gt;NavigationView&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;kt&quot;&gt;List&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;menuItems&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dish&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt;
+         &lt;span class=&quot;kt&quot;&gt;NavigationLink&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;destination&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;MenuDetail&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;dish&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dish&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+             &lt;span class=&quot;kt&quot;&gt;MenuRow&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;dish&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dish&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+      &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;navigationBarTitle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;Text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Menu&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;That’s it. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;navigationBarTitle&lt;/code&gt; modifier sets the title &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Text&lt;/code&gt; of the screens inside &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;NavigationView&lt;/code&gt;. Now you can run the preview in the canvas to see &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;NavigationView&lt;/code&gt; working. Clicking on a row will take you to the respective Menu Details screen. Here, the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;NavigationLink&lt;/code&gt; works similar to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Segue&lt;/code&gt; but in SwiftUI and in the most declarative way. This is how it should look.
+&lt;img src=&quot;../assets/images/menu-with-navigation-view.png&quot; alt=&quot;menu-with-navigation-view&quot; class=&quot;img-responsive&quot; /&gt;
+Clicking on a row will take you to menu details screen.
+&lt;img src=&quot;../assets/images/menu-detail-in-navigation-view.png&quot; alt=&quot;menu-detail-in-navigation-view&quot; class=&quot;img-responsive&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;We will dive in deep in the future posts about &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;NavigationView&lt;/code&gt;. You can download &lt;a href=&quot;https://github.com/gauthamilango/NavigatableRestaurantMenu/archive/master.zip&quot;&gt;completed project here&lt;/a&gt; and find &lt;a href=&quot;https://developer.apple.com/tutorials/swiftui/building-lists-and-navigation&quot;&gt;more info on NavigationView here&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Fri, 03 Jan 2020 13:30:00 +0530</pubDate>
+        <link>http://localhost:4000/blog/articles/how-to-navigate-in-swiftui.html</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/articles/how-to-navigate-in-swiftui.html</guid>
+        
+        <category>SwiftUI</category>
+        
+        <category>beginner</category>
+        
+        <category>Swift</category>
+        
+        <category>Opaque-types</category>
         
         
       </item>
