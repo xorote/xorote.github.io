@@ -3,11 +3,11 @@
   <channel>
     <title>Gigarad</title>
     <description>Our two cents about iOS App Development, Android App Development and React Native App Development (a.k.a We write about Mobile App Development :D)</description>
-    <link>http://localhost:4000/blog/</link>
-    <atom:link href="http://localhost:4000/blog/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 04 Jan 2020 10:31:45 +0530</pubDate>
-    <lastBuildDate>Sat, 04 Jan 2020 10:31:45 +0530</lastBuildDate>
-    <generator>Jekyll v3.8.5</generator>
+    <link>"https://gigarad.co/blog/index.html"</link>
+    <atom:link href="https://gigarad.co/blog/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Fri, 14 Aug 2020 22:35:34 +0530</pubDate>
+    <lastBuildDate>Fri, 14 Aug 2020 22:35:34 +0530</lastBuildDate>
+    <generator>Jekyll v3.9.0</generator>
     
       <item>
         <title>Hello world, SwiftUI?</title>
@@ -36,12 +36,12 @@ Once you’ve clicked &lt;code class=&quot;language-plaintext highlighter-rouge&
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;&lt;span class=&quot;kd&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;SwiftUI&lt;/span&gt;
 &lt;span class=&quot;kd&quot;&gt;struct&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;ContentView&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;View&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;some&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;View&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;some&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;View&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
         &lt;span class=&quot;kt&quot;&gt;Text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Hello, World!&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
     &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;span class=&quot;kd&quot;&gt;struct&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;ContentView_Previews&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;PreviewProvider&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;previews&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;some&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;View&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;previews&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;some&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;View&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
         &lt;span class=&quot;kt&quot;&gt;ContentView&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
     &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
@@ -59,8 +59,8 @@ Once you’ve clicked &lt;code class=&quot;language-plaintext highlighter-rouge&
 
 </description>
         <pubDate>Sun, 29 Dec 2019 15:48:00 +0530</pubDate>
-        <link>http://localhost:4000/blog/articles/how-to-helloworld-swiftui.html</link>
-        <guid isPermaLink="true">http://localhost:4000/blog/articles/how-to-helloworld-swiftui.html</guid>
+        <link>https://gigarad.co/blog/articles/how-to-helloworld-swiftui.html</link>
+        <guid isPermaLink="true">https://gigarad.co/blog/articles/how-to-helloworld-swiftui.html</guid>
         
         <category>SwiftUI</category>
         
@@ -232,7 +232,7 @@ And then enter the contents in the below sample or you can add your own.&lt;/p&g
 &lt;p&gt;Now let’s create the row element for our Menu List. Use shortcut key &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;CMD + N&lt;/code&gt;, select &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;SwiftUI View&lt;/code&gt; under &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;User Interface&lt;/code&gt; section. And name the file as &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;MenuRow&lt;/code&gt; and click Create to create the file. You will be presented with the new file, with the boiler plate code, that displays “Hello,World!”. Click on &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Resume&lt;/code&gt; button in the canvas on the right hand side to see the previews. Let’s replace the code of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;MenuRow&lt;/code&gt; struct with the following.&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;&lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;dish&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Dish&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;some&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;View&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;some&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;View&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
         &lt;span class=&quot;kt&quot;&gt;HStack&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
             &lt;span class=&quot;n&quot;&gt;dish&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;image&lt;/span&gt;
                 &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;resizable&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
@@ -257,8 +257,8 @@ And then enter the contents in the below sample or you can add your own.&lt;/p&g
 Pretty simple huh? If you’re from iOS development background, you would be shocked, because the above code is very very minimal and highly declarative and makes complete sense. All thanks to the Opaque types, Function Builders and Return omission features in the Swift 5.1. The &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Dish&lt;/code&gt; struct conforming to the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Identifiable&lt;/code&gt; protocol lets us not declare the unique id key path, which is required to initialize the SwiftUI &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;List&lt;/code&gt;. More on &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ViewBuilder&lt;/code&gt; and function builders in the future, they make this kind of code possible. You can &lt;a href=&quot;https://github.com/gauthamilango/completeRestaurantMenuApp/archive/master.zip&quot;&gt;download the completed project here&lt;/a&gt;. To know more you can look into &lt;a href=&quot;https://developer.apple.com/tutorials/swiftui/building-lists-and-navigation&quot;&gt;Apple’s official SwiftUI tutorials by clicking here.&lt;/a&gt;&lt;/p&gt;
 </description>
         <pubDate>Wed, 01 Jan 2020 15:30:00 +0530</pubDate>
-        <link>http://localhost:4000/blog/articles/how-to-create-table-view-in-swiftui.html</link>
-        <guid isPermaLink="true">http://localhost:4000/blog/articles/how-to-create-table-view-in-swiftui.html</guid>
+        <link>https://gigarad.co/blog/articles/how-to-create-table-view-in-swiftui.html</link>
+        <guid isPermaLink="true">https://gigarad.co/blog/articles/how-to-create-table-view-in-swiftui.html</guid>
         
         <category>SwiftUI</category>
         
@@ -289,7 +289,7 @@ manage screens or &lt;code class=&quot;language-plaintext highlighter-rouge&quot
 &lt;p&gt;Let’s create a menu detail screen, so that we can display details of a menu if a user clicks on a menu. Click on &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;CMD + N&lt;/code&gt; shortcut to Create a new file and select &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;SwiftUI View&lt;/code&gt; under &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;User Interface&lt;/code&gt; section. And now copy the code below and paste it in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;MenuDetail&lt;/code&gt; struct. We will get into detail about this in our upcoming posts.&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;&lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;dish&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Dish&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;some&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;View&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;some&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;View&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
     &lt;span class=&quot;kt&quot;&gt;VStack&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
       &lt;span class=&quot;n&quot;&gt;dish&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;image&lt;/span&gt;
         &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;edgesIgnoringSafeArea&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;top&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
@@ -337,8 +337,8 @@ Clicking on a row will take you to menu details screen.
 &lt;p&gt;We will dive in deep in the future posts about &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;NavigationView&lt;/code&gt;. You can download &lt;a href=&quot;https://github.com/gauthamilango/NavigatableRestaurantMenu/archive/master.zip&quot;&gt;completed project here&lt;/a&gt; and find &lt;a href=&quot;https://developer.apple.com/tutorials/swiftui/building-lists-and-navigation&quot;&gt;more info on NavigationView here&lt;/a&gt;&lt;/p&gt;
 </description>
         <pubDate>Fri, 03 Jan 2020 13:30:00 +0530</pubDate>
-        <link>http://localhost:4000/blog/articles/how-to-navigate-in-swiftui.html</link>
-        <guid isPermaLink="true">http://localhost:4000/blog/articles/how-to-navigate-in-swiftui.html</guid>
+        <link>https://gigarad.co/blog/articles/how-to-navigate-in-swiftui.html</link>
+        <guid isPermaLink="true">https://gigarad.co/blog/articles/how-to-navigate-in-swiftui.html</guid>
         
         <category>SwiftUI</category>
         

@@ -8,7 +8,7 @@ class CopyrightInfo extends React.Component {
   }
 
   render() {
-      return "© 2018 - 2019 GIGARAD";
+      return "© 2018 - 2020 GIGARAD";
   }
 }
 

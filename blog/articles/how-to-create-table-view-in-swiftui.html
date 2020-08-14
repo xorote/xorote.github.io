@@ -22,7 +22,7 @@
 
     <header class="main-header post-head no-cover">
     <nav class="main-nav  clearfix">
-        <a class="back-button icon-arrow-left" href="/blog/">Home</a>
+        <a class="back-button icon-arrow-left" href="/blog/index.html">Home</a>
         <a class="subscribe-button icon-feed" href="/blog/feed.xml">Subscribe</a>
     </nav>
 </header>
@@ -198,7 +198,7 @@ And then enter the contents in the below sample or you can add your own.</p>
 <p>Now let’s create the row element for our Menu List. Use shortcut key <code class="language-plaintext highlighter-rouge">CMD + N</code>, select <code class="language-plaintext highlighter-rouge">SwiftUI View</code> under <code class="language-plaintext highlighter-rouge">User Interface</code> section. And name the file as <code class="language-plaintext highlighter-rouge">MenuRow</code> and click Create to create the file. You will be presented with the new file, with the boiler plate code, that displays “Hello,World!”. Click on <code class="language-plaintext highlighter-rouge">Resume</code> button in the canvas on the right hand side to see the previews. Let’s replace the code of <code class="language-plaintext highlighter-rouge">MenuRow</code> struct with the following.</p>
 
 <figure class="highlight"><pre><code class="language-swift" data-lang="swift"><span class="k">var</span> <span class="nv">dish</span><span class="p">:</span> <span class="kt">Dish</span>
-    <span class="k">var</span> <span class="nv">body</span><span class="p">:</span> <span class="n">some</span> <span class="kt">View</span> <span class="p">{</span>
+    <span class="k">var</span> <span class="nv">body</span><span class="p">:</span> <span class="kd">some</span> <span class="kt">View</span> <span class="p">{</span>
         <span class="kt">HStack</span> <span class="p">{</span>
             <span class="n">dish</span><span class="o">.</span><span class="n">image</span>
                 <span class="o">.</span><span class="nf">resizable</span><span class="p">()</span>
