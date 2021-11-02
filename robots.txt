@@ -1,3 +1,4 @@
-# https://www.robotstxt.org/robotstxt.html
 User-agent: *
-Disallow:
+Allow: /
+Sitemap: https://gigarad.co/sitemap/sitemap-index.xml
+Host: https://gigarad.co

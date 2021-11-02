@@ -3,10 +3,10 @@
   <channel>
     <title>Gigarad</title>
     <description>Our two cents about iOS App Development, Android App Development and React Native App Development (a.k.a We write about Mobile App Development :D)</description>
-    <link>"https://gigarad.co/blog/index.html"</link>
-    <atom:link href="https://gigarad.co/blog/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 14 Aug 2020 22:35:34 +0530</pubDate>
-    <lastBuildDate>Fri, 14 Aug 2020 22:35:34 +0530</lastBuildDate>
+    <link>"http://localhost:4000/blog/index.html"</link>
+    <atom:link href="http://localhost:4000/blog/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Thu, 22 Jul 2021 14:42:15 +0530</pubDate>
+    <lastBuildDate>Thu, 22 Jul 2021 14:42:15 +0530</lastBuildDate>
     <generator>Jekyll v3.9.0</generator>
     
       <item>
@@ -59,8 +59,8 @@ Once you’ve clicked &lt;code class=&quot;language-plaintext highlighter-rouge&
 
 </description>
         <pubDate>Sun, 29 Dec 2019 15:48:00 +0530</pubDate>
-        <link>https://gigarad.co/blog/articles/how-to-helloworld-swiftui.html</link>
-        <guid isPermaLink="true">https://gigarad.co/blog/articles/how-to-helloworld-swiftui.html</guid>
+        <link>http://localhost:4000/blog/articles/how-to-helloworld-swiftui.html</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/articles/how-to-helloworld-swiftui.html</guid>
         
         <category>SwiftUI</category>
         
@@ -257,8 +257,8 @@ And then enter the contents in the below sample or you can add your own.&lt;/p&g
 Pretty simple huh? If you’re from iOS development background, you would be shocked, because the above code is very very minimal and highly declarative and makes complete sense. All thanks to the Opaque types, Function Builders and Return omission features in the Swift 5.1. The &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Dish&lt;/code&gt; struct conforming to the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Identifiable&lt;/code&gt; protocol lets us not declare the unique id key path, which is required to initialize the SwiftUI &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;List&lt;/code&gt;. More on &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ViewBuilder&lt;/code&gt; and function builders in the future, they make this kind of code possible. You can &lt;a href=&quot;https://github.com/gauthamilango/completeRestaurantMenuApp/archive/master.zip&quot;&gt;download the completed project here&lt;/a&gt;. To know more you can look into &lt;a href=&quot;https://developer.apple.com/tutorials/swiftui/building-lists-and-navigation&quot;&gt;Apple’s official SwiftUI tutorials by clicking here.&lt;/a&gt;&lt;/p&gt;
 </description>
         <pubDate>Wed, 01 Jan 2020 15:30:00 +0530</pubDate>
-        <link>https://gigarad.co/blog/articles/how-to-create-table-view-in-swiftui.html</link>
-        <guid isPermaLink="true">https://gigarad.co/blog/articles/how-to-create-table-view-in-swiftui.html</guid>
+        <link>http://localhost:4000/blog/articles/how-to-create-table-view-in-swiftui.html</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/articles/how-to-create-table-view-in-swiftui.html</guid>
         
         <category>SwiftUI</category>
         
@@ -337,8 +337,8 @@ Clicking on a row will take you to menu details screen.
 &lt;p&gt;We will dive in deep in the future posts about &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;NavigationView&lt;/code&gt;. You can download &lt;a href=&quot;https://github.com/gauthamilango/NavigatableRestaurantMenu/archive/master.zip&quot;&gt;completed project here&lt;/a&gt; and find &lt;a href=&quot;https://developer.apple.com/tutorials/swiftui/building-lists-and-navigation&quot;&gt;more info on NavigationView here&lt;/a&gt;&lt;/p&gt;
 </description>
         <pubDate>Fri, 03 Jan 2020 13:30:00 +0530</pubDate>
-        <link>https://gigarad.co/blog/articles/how-to-navigate-in-swiftui.html</link>
-        <guid isPermaLink="true">https://gigarad.co/blog/articles/how-to-navigate-in-swiftui.html</guid>
+        <link>http://localhost:4000/blog/articles/how-to-navigate-in-swiftui.html</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/articles/how-to-navigate-in-swiftui.html</guid>
         
         <category>SwiftUI</category>
         
