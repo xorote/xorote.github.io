@@ -5,8 +5,8 @@
     <description>Our two cents about iOS App Development, Android App Development and React Native App Development (a.k.a We write about Mobile App Development :D)</description>
     <link>"https://gigarad.co/blog/index.html"</link>
     <atom:link href="https://gigarad.co/blog/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 03 Nov 2021 12:05:25 +0530</pubDate>
-    <lastBuildDate>Wed, 03 Nov 2021 12:05:25 +0530</lastBuildDate>
+    <pubDate>Thu, 11 Nov 2021 21:37:00 +0530</pubDate>
+    <lastBuildDate>Thu, 11 Nov 2021 21:37:00 +0530</lastBuildDate>
     <generator>Jekyll v3.9.0</generator>
     
       <item>
@@ -351,6 +351,47 @@ Clicking on a row will take you to menu details screen.
         <category>NavigationView</category>
         
         <category>NavigationLink</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>How to fix the issue with downloading provisioning profile for your app after upgrading to Xcode 13?</title>
+        <description>&lt;p&gt;After using &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;macOS BigSur&lt;/code&gt; for almost an year, we decided to upgrade to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;macOS Monterey&lt;/code&gt;. Once we upgraded to the brand new OS, we also decided to get all the way with the new UI/UX and update our &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Xcode&lt;/code&gt; to the latest version. So we upgraded from &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Xcode 12&lt;/code&gt; to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Xcode 13&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h4 id=&quot;macos-monterey-and-xcode-13&quot;&gt;macOS Monterey and Xcode 13&lt;/h4&gt;
+&lt;p&gt;Without any doubt &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;macOS Monterey&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Xcode 13&lt;/code&gt; looked great in the new UI. And UX is great as the usable screen area has increased a lot. Eventhough we loved the new UI, it took a little bit of time for us to get used to the new icons in the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Xcode 13&lt;/code&gt; and the UX changes.&lt;/p&gt;
+
+&lt;h4 id=&quot;issue-with-downloading-provisioning-profile-while-trying-to-upload-an-archive-in-xcode-13---our-first-issue&quot;&gt;Issue with downloading provisioning profile while trying to upload an archive in Xcode 13 - Our first issue&lt;/h4&gt;
+&lt;p&gt;We were in rush working with one of our project as we were almost close to the deadline of delivering the app to our client. We were in final rounds of testing and we were making an archive to upload to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;AppStoreConnect&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Testflight&lt;/code&gt; for regression and beta testing. After creating the archive we tried to upload it to the AppStoreConnect and we got stuck there. The issue is we were not able to get the provisioning profile like we used to. Apple must have changed the Xcode 13’s behaviour about how it manages and downloads the provisioning profile.
+&lt;img src=&quot;../assets/images/provisioning-profile-download-issue.png&quot; alt=&quot;provisioning-profile-download-issue&quot; class=&quot;img-responsive&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;solution&quot;&gt;Solution?&lt;/h4&gt;
+&lt;p&gt;The cause of the issue is that Apple changed the way Xcode manages provisioning profiles. Instead of locally creating and managing provisioning profiles, Apple moved them to the cloud. And they didn’t just stop there and updated the user roles &amp;amp; access in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;App Store Connect&lt;/code&gt; and added an additional &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Access to Cloud Managed Distribution Certificate&lt;/code&gt; permission under &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Access to Certificates, Identifiers &amp;amp; Profile&lt;/code&gt; in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Additional Resources&lt;/code&gt;. You need to be an &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Admin&lt;/code&gt; in order to enable this for anyone with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Developer&lt;/code&gt; role. Follow the steps below to fix this issue.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Go to &lt;a href=&quot;https://appstoreconnect.apple.com&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;App Store Connect&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Select the “Users and Access” tab&lt;/li&gt;
+  &lt;li&gt;Select the right person and under Additional Resources, check both
+    &lt;ul&gt;
+      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Access to Certificates, Identifiers &amp;amp; Profiles and&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Access to Cloud Managed Distribution Certificate&lt;/code&gt;
+&lt;img src=&quot;../assets/images/provisioning-profile-download-issue-solution.png&quot; alt=&quot;provisioning-profile-download-issue-solution&quot; class=&quot;img-responsive&quot; /&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;We found this issue as an easy one to fix, Thanks to &lt;a href=&quot;https://stackoverflow.com/users/7196540/michal-Šrůtek&quot;&gt;Michal Šrůtek&lt;/a&gt; on &lt;a href=&quot;https://stackoverflow.com&quot;&gt;Stackoverflow&lt;/a&gt;. His &lt;a href=&quot;https://stackoverflow.com/a/69688381&quot;&gt;solution&lt;/a&gt; is easy to follow.&lt;/p&gt;
+</description>
+        <pubDate>Thu, 11 Nov 2021 13:30:00 +0530</pubDate>
+        <link>https://gigarad.co/blog/articles/how-to-fix-the-issue-with-downloading-provisioning-profile-for-your-app-after-upgrading-to-xcode-13.html</link>
+        <guid isPermaLink="true">https://gigarad.co/blog/articles/how-to-fix-the-issue-with-downloading-provisioning-profile-for-your-app-after-upgrading-to-xcode-13.html</guid>
+        
+        <category>Xcode13</category>
+        
+        <category>Xcode</category>
+        
+        <category>provisioning-profile</category>
         
         
       </item>
