@@ -5,8 +5,8 @@
     <description>Our two cents about iOS App Development, Android App Development and React Native App Development (a.k.a We write about Mobile App Development :D)</description>
     <link>"https://gigarad.co/blog/index.html"</link>
     <atom:link href="https://gigarad.co/blog/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 19 Nov 2021 15:21:31 +0530</pubDate>
-    <lastBuildDate>Fri, 19 Nov 2021 15:21:31 +0530</lastBuildDate>
+    <pubDate>Wed, 24 Nov 2021 15:40:58 +0530</pubDate>
+    <lastBuildDate>Wed, 24 Nov 2021 15:40:58 +0530</lastBuildDate>
     <generator>Jekyll v3.9.0</generator>
     
       <item>
@@ -582,6 +582,127 @@ The speed of an application is one of the most important factors to consider whe
         <pubDate>Fri, 19 Nov 2021 13:30:00 +0530</pubDate>
         <link>https://gigarad.co/blog/articles/how-mobile-app-development-frameworks-can-create-the-right-app-for-your-business.html</link>
         <guid isPermaLink="true">https://gigarad.co/blog/articles/how-mobile-app-development-frameworks-can-create-the-right-app-for-your-business.html</guid>
+        
+        <category>Business</category>
+        
+        <category>Mobile</category>
+        
+        <category>App</category>
+        
+        <category>development</category>
+        
+        <category>frameworks</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Are Businesses Still Going for Android App Development? You Bet!</title>
+        <description>&lt;p&gt;While picking a mobile application for building their business various entrepreneurs favor Android-based applications. Why so? Android devices dominate about 85% of the world’s mobile market. Android applications help businesses to reach a larger target market as well as effectively improve the brand value.&lt;/p&gt;
+
+&lt;p&gt;Android based platform is not only known for its scalability, popularity and easy access on Google Play Store. Its prowess goes beyond the mere application variety. It allows integrating state-of-the-art innovations with Android mobile applications and devices to make the advancement interaction quicker and more powerful. This load of highlights on Android applications is the right decision for some organizations.&lt;/p&gt;
+
+&lt;h4 id=&quot;android-instant-apps&quot;&gt;Android Instant Apps&lt;/h4&gt;
+&lt;p&gt;Android based &lt;a href=&quot;https://developer.android.com/topic/google-play-instant&quot;&gt;Instant applications&lt;/a&gt; are one of the most efficient innovations that allows the customers to install applications on their devices without its explicit installation. It saves clients’ time and allows them to use the application a lot quicker as compared to iOS and web-based applications.&lt;/p&gt;
+
+&lt;p&gt;Besides, Android applications don’t take up a lot of space on your devices, thus allowing the framework to work efficiently even when the memory is full.&lt;/p&gt;
+
+&lt;p&gt;The innovation makes it a lot simpler for organizations to publicize their apps and draw in expected clients. Today, the clients don’t have to go to the Google Play Store looking for an application, they can simply type in the query on Google and the search engine will show the best-suited application based on the keywords entered by the users. However, to install the application, your browser will redirect you to the Google Play store.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../assets/images/instant-app.png&quot; alt=&quot;Instant Applications&quot; title=&quot;Instant applications&quot; class=&quot;img-responsive&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;artificial-intelligence-and-machine-learning&quot;&gt;Artificial intelligence and Machine Learning&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Artificial_intelligence&quot;&gt;Artificial intelligence&lt;/a&gt; and &lt;a href=&quot;https://en.wikipedia.org/wiki/Machine_learning&quot;&gt;Machine Learning&lt;/a&gt; innovations are generally used for streamlining the performance of your Android OS. They support such advanced operating systems as &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;voice collaborators&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;chatbots&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;preparing [Big Data](https://en.wikipedia.org/wiki/Big_data)&lt;/code&gt;, computerization, and various others.&lt;/p&gt;
+
+&lt;p&gt;Execution of AI and ML in Android applications assists organizations with upgrading their clients’ experience. For instance, they can:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Computerize routine errands, for example, characterizing tickets by point, sending messages and updates;&lt;/li&gt;
+  &lt;li&gt;Further develop client suggestions, framing them dependent on client requirements ;&lt;/li&gt;
+  &lt;li&gt;Better filter options for e-commerce businesses;&lt;/li&gt;
+  &lt;li&gt;Allows you to customize a mobile app based on customer preferences. With AI and ML, you get a better understanding and a deeper connection with the users.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;../assets/images/AI-vs-ML.jpeg&quot; alt=&quot;Artificial Intelligence and Machine Learning&quot; title=&quot;AI vs ML&quot; class=&quot;img-responsive&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;iot&quot;&gt;IoT&lt;/h4&gt;
+&lt;p&gt;The two mobile application advancement patterns in 2021 are &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;[5G](https://en.wikipedia.org/wiki/5G)&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;[Internet of Things](https://en.wikipedia.org/wiki/Internet_of_things)&lt;/code&gt; innovations. 5G is required to give an emotional ascent to IoT, advancing its spread from Smart Houses to Smart Cities.&lt;/p&gt;
+
+&lt;p&gt;Other than the splendid possibilities, later on, various organizations are now receiving generous rewards from installing IoT innovation in their mobile applications. Presently IoT operating systems are used in:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Smartwatches enabled by &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;GPS, accelerometer, and gyrator gadgets&lt;/code&gt; for better developments, area, and exercises following;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Smart Homes sensors&lt;/code&gt; to mounted light, temperature, security status, and conceivable water or gas spillage;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Smart Home contraptions&lt;/code&gt; to associate a microwave, an ice chest, a lighting framework, and others into one organization which can be overseen in a mobile application physically or with the assistance of voice colleagues;&lt;/li&gt;
+  &lt;li&gt;Modern IoT for following creation stream and preventive upkeep, when all the details, situations with, investigation can be checked basically in one mobile application;&lt;/li&gt;
+  &lt;li&gt;Transportation and coordination when every item course can be followed in an application by checking a standardized identification on the name. One such example is &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;CoPilot Truck&lt;/code&gt; that makes navigation easy for truck drivers complete with tracking technology and maintenance alerts that makes it easier for trucking companies to offset their losses via timely intervention.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;../assets/images/IoT.png&quot; alt=&quot;IoT&quot; title=&quot;IoT&quot; class=&quot;img-responsive&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;ar-and-vr-technology&quot;&gt;AR and VR Technology&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Augmented_reality&quot;&gt;Augmented Reality&lt;/a&gt; and &lt;a href=&quot;https://en.wikipedia.org/wiki/Virtual_reality&quot;&gt;Virtual Reality&lt;/a&gt; aren’t innovations in Android improvement. For instance, the Google platform &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;[ARCore](https://en.wikipedia.org/wiki/ARCore)&lt;/code&gt; has been permitting building increased reality encounters for the Android platform since March 2018.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../assets/images/augmented-vs-virtual-reality.png&quot; alt=&quot;Augmented Reality and Virtual Reality&quot; title=&quot;AR vs VR&quot; class=&quot;img-responsive&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;While executing AR/VR advancements in their mobile applications, organizations take their client encounters to another level. For instance, IKEA dispatched its &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;[Place](https://www.ikea.com/au/en/customer-service/mobile-apps/say-hej-to-ikea-place-pub1f8af050)&lt;/code&gt; application that empowers purchasers to check whether the furniture they might want to purchase fits in their homes. Google Maps has an AR update that assists with better exploring around a city by setting a virtual guide over genuine road sees.&lt;/p&gt;
+
+&lt;p&gt;In 2021, there will be more organizations that will try different things with VR/AR innovations and effectively execute them in their applications. They will turn out to be more spread around different specialties and businesses like training, the travel industry and travel, land, amusement, E-trade, and retail.&lt;/p&gt;
+
+&lt;h4 id=&quot;on-demand-apps&quot;&gt;On-demand Apps&lt;/h4&gt;
+&lt;p&gt;On-demand applications were exceptionally famous in the Corona-infection age in 2020 and will keep on being used much of the time in the future. These are the applications that offer speedy types of assistance like Uber or pizza conveyance administration.&lt;/p&gt;
+
+&lt;p&gt;On-demand applications are used in different specialties like retail, food conveyance, health tech, staple, and various others. They assisted various organizations with keeping their client stream high during the lockdowns and some of them even expanded their incomes by arriving at each client.&lt;/p&gt;
+
+&lt;p&gt;These applications will hold their fame in 2021 as they assist their clients with performing errands quickly and helpfully.&lt;/p&gt;
+
+&lt;h4 id=&quot;m-commerce&quot;&gt;M-Commerce&lt;/h4&gt;
+&lt;p&gt;Business Insider predicts that &lt;a href=&quot;https://en.wikipedia.org/wiki/Mobile_commerce&quot;&gt;M-Commerce&lt;/a&gt; volume will ascend from &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;25.5%&lt;/code&gt; in 2019 to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;44%&lt;/code&gt; by 2024. M-Commerce, otherwise called mobile trade, includes any financial exchanges clients can do by using their cell phones. They include:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Mobile cash moving;&lt;/li&gt;
+  &lt;li&gt;Electronic tickets, E-tickets, E-coupons, electronic dedication cards;&lt;/li&gt;
+  &lt;li&gt;Internet business;&lt;/li&gt;
+  &lt;li&gt;Mobile banking;&lt;/li&gt;
+  &lt;li&gt;Contactless installments and installments in mobile applications, and others.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The M-Commerce applications make installment methods fast and helpful, along these lines various organizations remember mobile installments for their applications. Most importantly, they can be effectively underlying any mobile application as Google gave its installment platform Google Pay application for Android application designers, making M-Commerce benefits significantly safer and simple-to-use. Some of the top examples are e-commerce giants like Amazon and Flipkart that have modeled their e-commerce to fit the portability of m-commerce. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Meesho&lt;/code&gt; is yet another Indian retail app that works wonders as an m-commerce app.&lt;/p&gt;
+
+&lt;h4 id=&quot;multiplatform-development-flutter&quot;&gt;Multiplatform Development (Flutter)&lt;/h4&gt;
+&lt;p&gt;Multiplatform improvement with &lt;a href=&quot;https://flutter.dev/&quot;&gt;Flutter&lt;/a&gt; innovation from Google is the eventual fate of native applications. With this structure, mobile designers can construct a native application that fits both Android and iOS platforms without forfeiting their native application usefulness.&lt;/p&gt;
+
+&lt;p&gt;Various designers have effectively tried and delighted in Flutter when building mobile applications as it’s profoundly adaptable and gives an assortment of improvement operating systems. Using Flutter, they can foster native applications a lot quicker and give a base reasonable item to the market inside a brief time frame.&lt;/p&gt;
+
+&lt;p&gt;There are as of now various applications created with Flutters like &lt;a href=&quot;https://www.alibaba.com/&quot;&gt;Alibaba&lt;/a&gt;,&lt;a href=&quot;https://en.wikipedia.org/wiki/Google_Ads&quot;&gt;Google Ads&lt;/a&gt;, &lt;a href=&quot;https://reflect.app/&quot;&gt;Reflect&lt;/a&gt;, and various others. The innovation is required to be the most sizzling mobile advancement pattern in 2021.&lt;/p&gt;
+
+&lt;h4 id=&quot;kotlin-multiplatform&quot;&gt;Kotlin MultiPlatform&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&quot;https://kotlinlang.org/&quot;&gt;Kotlin&lt;/a&gt; is a statically composed programming language that can be used as a choice to Flutter for building multi-platform applications. various mobile engineers incline toward Kotlin as it’s:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Expressive&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;succinct&lt;/code&gt;;&lt;/li&gt;
+  &lt;li&gt;Impeccably consolidates with Java and JavaScript;&lt;/li&gt;
+  &lt;li&gt;Suits for offbeat programming which makes normal mobile application assignments a lot &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;quicker&lt;/code&gt;;&lt;/li&gt;
+  &lt;li&gt;Allows building &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;protected and stable&lt;/code&gt; code;&lt;/li&gt;
+  &lt;li&gt;Runs on &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Linux&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Windows&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Mac&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Java virtual machine (JVM)&lt;/code&gt;;&lt;/li&gt;
+  &lt;li&gt;Allows using a solitary codebase for iOS and Android business rationale.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Kotlin is required to be profoundly famous in 2021 as it speeds up advancement strategies and saves mobile engineers a lot of time.&lt;/p&gt;
+
+&lt;h5 id=&quot;is-android-mobile-app-development-worth&quot;&gt;Is Android Mobile App Development Worth?&lt;/h5&gt;
+&lt;p&gt;Mobile application development not just aids you in acquiring the benefit factors yet additionally makes your life and work simpler. In any case, if you are fostering a mobile application for bringing in cash you need to know all the rules and guidelines. Take as much time as is needed to consider the application or administrations and afterward move to the improvement cycle.&lt;/p&gt;
+
+&lt;h4 id=&quot;conclusion&quot;&gt;Conclusion:&lt;/h4&gt;
+&lt;p&gt;There are various routes through which Android applications can maximize your productivity. You can configure, make and foster your thoughts through Android applications to acquire great ROI on your ventures.&lt;/p&gt;
+
+&lt;p&gt;Android mobile application development has a great deal to bring to the table to programming engineers and organizations that need to construct their mobile applications in 2021.&lt;/p&gt;
+
+&lt;p&gt;By choosing android applications, companies can essentially develop client mobile experience and increase their brand value.&lt;/p&gt;
+</description>
+        <pubDate>Wed, 24 Nov 2021 13:30:00 +0530</pubDate>
+        <link>https://gigarad.co/blog/articles/are-business-still-going-for-android-app-development.html</link>
+        <guid isPermaLink="true">https://gigarad.co/blog/articles/are-business-still-going-for-android-app-development.html</guid>
         
         <category>Business</category>
         
