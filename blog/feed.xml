@@ -5,8 +5,8 @@
     <description>Our two cents about iOS App Development, Android App Development and React Native App Development (a.k.a We write about Mobile App Development :D)</description>
     <link>"https://gigarad.co/blog/index.html"</link>
     <atom:link href="https://gigarad.co/blog/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 24 Nov 2021 15:40:58 +0530</pubDate>
-    <lastBuildDate>Wed, 24 Nov 2021 15:40:58 +0530</lastBuildDate>
+    <pubDate>Tue, 25 Jan 2022 13:49:14 +0530</pubDate>
+    <lastBuildDate>Tue, 25 Jan 2022 13:49:14 +0530</lastBuildDate>
     <generator>Jekyll v3.9.0</generator>
     
       <item>
@@ -713,6 +713,68 @@ The speed of an application is one of the most important factors to consider whe
         <category>development</category>
         
         <category>frameworks</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>All the fuss between Android and iOS</title>
+        <description>&lt;p&gt;Android and iOS are the two most popular operating systems installed worldwide. Launched almost a decade and a half ago, both of them are built to perform almost same functions in smartphones, smartwatches, tablets,TV and in case of iOS it extends to iPhones . Both the systems have undergone various updates to match their counterparts and hence have left the audience struggling to choose between the two. The below article provides with the comparison of various features of android and iOS.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../assets/images/Android-versus-iOS.png&quot; alt=&quot;Android vs iOS&quot; title=&quot;Android versus iOS&quot; class=&quot;img-responsive&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;android&quot;&gt;Android&lt;/h3&gt;
+&lt;p&gt;Android is an operating system developed in 2008 by a group of firms gathered together to develop open standards for mobile devices. Sponsored by Google, its the most widely used operating system followed by iOS.&lt;/p&gt;
+
+&lt;h3 id=&quot;ios&quot;&gt;iOS&lt;/h3&gt;
+&lt;p&gt;iOS is an operating system developed in 2007 by Apple exclusively for its hardware. It is the basis for other three operating systems produced by Apple: iPadOS, tvOS and watchOS. It has an excellent UI and fluid responsiveness that provides user experience like no other&lt;/p&gt;
+
+&lt;h3 id=&quot;key-differences&quot;&gt;Key Differences&lt;/h3&gt;
+&lt;h4 id=&quot;1kernel-&quot;&gt;1.Kernel :&lt;/h4&gt;
+&lt;p&gt;A &lt;a href=&quot;https://en.wikipedia.org/wiki/KERNAL&quot;&gt;Kernel&lt;/a&gt; is the core of an OS that facilitates interaction between the hardware and software systems. It provides basic services such as process, memory management, file systems, device control and networking. The Android Kernel is &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Linux&lt;/code&gt; based and easily customisable. On the other hand, the iOS is a hybrid model called &lt;a href=&quot;https://en.wikipedia.org/wiki/XNU&quot;&gt;XNU&lt;/a&gt;,a Darwin based model, based off of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Unix&lt;/code&gt;, developed by Apple itself. The two kernels differ in their uptime, stability and accessibility. And iOS is relatively stable compared to Android and has a better uptime. This basically creates a varying user experience. Also, android OS source code has been made open while apple closely guards theirs.&lt;/p&gt;
+
+&lt;h4 id=&quot;2exclusivity-&quot;&gt;2.Exclusivity :&lt;/h4&gt;
+&lt;p&gt;Android is an open source model suited for almost all hardware systems by various companies. Its openness has never been better.An example would be &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Internet Of Things&lt;/code&gt; where any smart device, irrespective of their brands can be connected to form an ecosystem and can interact with each other. iOS, on the other hand is at the centre of the most coveted closed model that runs almost exclusively on their own hardware.Only in recent times, there are options for both the systems to function together but still have to bear the rigid nature of iOS. Eg.Android Tv remote application available in apple store can be used to control TV. But in case of sharing information among devices outside of its ecosystem, it still has a long road to catch up with android.&lt;/p&gt;
+
+&lt;h4 id=&quot;3third-party-applications-&quot;&gt;3.Third party applications :&lt;/h4&gt;
+&lt;p&gt;One of the main attraction for iOS users is that it limits third party applications and most of their key functions are done by inbuilt or first party applications baked into their OS such as &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;iMessage&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;FaceTime&lt;/code&gt;, etc. Other than that, recent updates of Safari by Apple has enabled blocking of all third party cookies that prevents various websites from following you or tracking your activity. Whereas in android, there is no such provision. This is further amped up by rigid approval policy of applications by Apple. Every single app and their update is reviewed by Apple before it is published. Also there is a myth that Apple doesn’t allow third party applications. iOS does allow third party applications provided they pass through their security scrutiny.&lt;/p&gt;
+
+&lt;h4 id=&quot;4security-&quot;&gt;4.Security :&lt;/h4&gt;
+&lt;p&gt;Blocking of third party applications comes in handy for security purposes. The exclusivity in iOS and its stringent application approval process almost gives place for no threats. Studies suggest that android is more prone to malware threats than iOS. Its because of its global popularity and open approach. Also, Apple’s hardware and software are inseparable and has complete control over each other making them less vulnerable. Apple also provides features such as &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;iCloud lock&lt;/code&gt;, which has got even better with the new &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Find My&lt;/code&gt; application that forbids unauthorised use of iOS, macOS, iPadOS and watchOS. On the other hand, Android has an easy go application approval process. Beyond that, security also depends on the hardware its running on. Since android is inclusive, the security also varies with the manufacturers. Eg.Samsung KNOX 2.0 provides a more secure booting process but cannot be said for others.&lt;/p&gt;
+
+&lt;h4 id=&quot;5performance-&quot;&gt;5.Performance :&lt;/h4&gt;
+&lt;p&gt;The performance of iOS is relatively better in the longer run whereas most android doesn’t show such promise. Apple processors are designed to work perfectly with the few devices that apple makes. Controlling both the software and hardware sides, iOS and macOS are optimised to acquire greater efficiency out of their system. Eg.Apple has made Safari as their default browser since it consumes lesser battery than Google Chrome. Performance also depends on the processors used. 2-core iOS processors are faster than 8-core android processors. Also when it comes to memory handling, iPhone 6 with 1GB of RAM can easily outperform an android mobile with 3GB of RAM. This is because Android performs a function called &lt;a href=&quot;https://en.wikipedia.org/wiki/Garbage_collection_(computer_science)&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Garbage collection&lt;/code&gt;&lt;/a&gt; that consumes hefty battery and memory. iOS on the other hand is designed to avoid garbage collection. Nevertheless, Apple also supports 6 year software updates whereas Android provides for a maximum of only two. This further varies with different manufacturers providing different update support. Also when it comes to battery life, iOS, once again is efficient than android providing lengthier battery life in 3000mh compared to 5000mAh in Android or even greater.&lt;/p&gt;
+
+&lt;h4 id=&quot;6interaction-with-other-devices-&quot;&gt;6.Interaction with other devices :&lt;/h4&gt;
+&lt;p&gt;iOS is a closed ecosystem which provides better interaction among iPhones, iPads, MacOS and other exclusive gadgets. It has tools like &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Airdrop&lt;/code&gt; that facilitates faster interaction among the Apple devices. Android, on the other hand, being almost interoperable on any smart device, offers better interaction options. Eg. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Siri&lt;/code&gt; is only built-in for &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Apple Homepads&lt;/code&gt;, while google assistant can be downloaded even in iOS. Other great example that validates the interaction of Android with other devices is Smart Home integration where devices of any manufacturing can communicate with each other hassle free.&lt;/p&gt;
+
+&lt;h4 id=&quot;7rooting-and-jailbreaking-&quot;&gt;7.Rooting and Jailbreaking :&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Rooting_(Android)&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Rooting&lt;/code&gt;&lt;/a&gt;, also known as root access, in android lets user takes complete control over the mobile OS such as exploiting a bug, or a flaw indesign or configuration oversight and unlocking the boot loader. It is the last resort mechanism that can remove or replace the complete operating system of the device. Rooting in iOS can be identified as &lt;a href=&quot;https://en.wikipedia.org/wiki/IOS_jailbreaking&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Jailbreaking&lt;/code&gt;&lt;/a&gt; which is also similar to android but by by-passing various restrictions put by Apple by exploiting vulnerabilities and adapting to prohibited activities such as side loading.&lt;/p&gt;
+
+&lt;h4 id=&quot;8cloud-services-&quot;&gt;8.Cloud services :&lt;/h4&gt;
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Cloud storage&lt;/code&gt; and automatic backups are a must for any gadget we work on. Android offers a cloud service of 15GB for free and cross-platform support. You can use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Google Drive&lt;/code&gt; on macOS and iOS. Whereas Apple provides only 5GB storage space and only supports iOS,MacOS and Windows. iCloud is not available in android but can be accessed through web.&lt;/p&gt;
+
+&lt;h4 id=&quot;9alternative-app-stores-&quot;&gt;9.Alternative App stores :&lt;/h4&gt;
+&lt;p&gt;Android is feasible with app stores other than the designated ones. We can download apps from stores other than Play Store and easy to sideload. &lt;a href=&quot;https://en.wikipedia.org/wiki/Sideloading&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Sideloading&lt;/code&gt;&lt;/a&gt; in iOS can be done only by &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jailbreaking&lt;/code&gt; and it exploits the credibility of the system.&lt;/p&gt;
+
+&lt;h4 id=&quot;10accessibility-&quot;&gt;10.Accessibility :&lt;/h4&gt;
+&lt;p&gt;Accessibility is one of the key determinants of any OS that ultimately appeals the users.Smartphones usually adopt to &lt;a href=&quot;https://en.wikipedia.org/wiki/Direct_manipulation_interface&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Direct Manipulation Interface&lt;/code&gt;&lt;/a&gt; that helps the users to interact with the device. iOS is simpler to use because of its uniformity across all the devices.It consists of tools such as &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Voiceover&lt;/code&gt; that enables the user to interact with the device without manually accessing the screen. It also offers a range of options to customise your device but to some extent. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Widgets&lt;/code&gt; are key accessibility features that displays customised app sets that are placed on the home screen for easy use. Though android has enabled widgets in their OS almost from the initial days and Apple has only recently developed them in iOS 14, they have surpassed android with their first party widgets. Also, downloading from a browser and accessing a file can be a real pain in iOS. For example, we can set any ringtone baked inside the OS free of cost but on the other hand, we have to buy ringtones of our choice from the store and it costs  extra. Files accessibility is another field where iOS have to focus more. The reason for this is iOS apps are enforced to sandboxing so they are restricted from accessing files stored by other apps. It offers a protection bubble where are apps are prohibited from communicating with each other and exchange data amongst each other. Hence the concept of a File manager is a violation of their memory management policy. Any file to be saved is saved to iCloud and can be accessed locally. Though it has Files app, it cannot be equated with Files explorer in Android that helps organise files just like in Desktop PC. Android on the contrary, lets us walk all over it. Files explorer by Android can store files from browsers and can be accessed anywhere.&lt;/p&gt;
+
+&lt;h4 id=&quot;11-voice-assistants-&quot;&gt;11. Voice Assistants :&lt;/h4&gt;
+&lt;p&gt;Voice assistants are the game changers that have evolved in the recent past. Performing trivial tasks without having to resort to manual operation is what voice assistants are all about. iOS voice assistant, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Siri&lt;/code&gt; is more straightforward in performing tasks such as calendar appointments, making calls, messaging, mailing, browsing, music playing and so on almost accurately with your voice command. It is baked into the system and hence offer smooth hassle free functions. It is available in iOS and macOS alone. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Google Assistant&lt;/code&gt; is a step ahead of Siri. It is best at general knowledge and can be downloaded for iOS.&lt;/p&gt;
+
+&lt;h3 id=&quot;conclusion--verdict-on-ios-vs-android&quot;&gt;Conclusion : Verdict on iOS vs Android&lt;/h3&gt;
+&lt;p&gt;Having discussed the differences and similarities, we can see that both the platforms have their own edges and flaws. Choosing android or iOS solely depends on what we want in a smartphone. If you are willing to compromise eye-catching features and specifications for security and reliability and don’t mind paying a bit extra, iOS should be your thing. On the contrary, if you want to choose a device that is interoperable with other smart gadgets, android is your solution. After all, it all comes down to what we desire.&lt;/p&gt;
+</description>
+        <pubDate>Sun, 16 Jan 2022 13:30:00 +0530</pubDate>
+        <link>https://gigarad.co/blog/articles/android-vs-ios.html</link>
+        <guid isPermaLink="true">https://gigarad.co/blog/articles/android-vs-ios.html</guid>
+        
+        <category>Android</category>
+        
+        <category>vs</category>
+        
+        <category>iOS</category>
         
         
       </item>
